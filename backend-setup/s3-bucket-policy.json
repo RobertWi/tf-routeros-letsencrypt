@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            /* This statement denies any non-HTTPS access to the bucket */
+            "Sid": "DenyNonTLSRequests",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::your-terraform-state-bucket",
+                "arn:aws:s3:::your-terraform-state-bucket/*"
+            ],
+            "Condition": {
+                "Bool": {
+                    "aws:SecureTransport": "false"
+                }
+            }
+        }
+    ]
+}

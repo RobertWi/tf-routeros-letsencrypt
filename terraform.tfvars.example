@@ -1,0 +1,30 @@
+# Router Configuration
+router_url = "api://192.168.1.1:8728"  # Start with non-SSL API port
+router_user = "admin"
+router_password = "your_secure_password"
+
+# After certificate is placed, update to:
+# router_url = "apis://192.168.1.1:8729"  # SSL API port
+
+# Cloudflare Configuration
+cloudflare_dns_api_token = "your_dns_api_token"
+cloudflare_zone_api_token = "your_zone_api_token"
+cloudflare_zone_id = "your_zone_id"
+cloudflare_zone_name = "example.com"
+
+# Domain Configuration
+subdomain = "router"           # First part of FQDN (e.g., router.home.example.com)
+domain_prefix = "home"         # Second part of FQDN
+email_address = "your.email@example.com"
+
+# DNS Configuration
+recursive_nameservers = ["192.168.1.1:53"]  # Your BIND9 server
+
+# Optional: SSL Service Configuration
+ssl_services = ["www-ssl", "api-ssl"]  # Services to configure with the certificate
+
+# Optional: Certificate File Names
+certificate_file_names = {
+  cert = "fullchain"
+  key  = "privkey"
+}
