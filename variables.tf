@@ -84,7 +84,7 @@ variable "cloudflare_polling_interval" {
 }
 
 variable "domain_prefix" {
-  description = "Domain prefix (e.g., 'home' in rt1.home.example.com)"
+  description = "Domain prefix (e.g., 'home' in host.home.example.com)"
   type        = string
   default     = "home"
 }

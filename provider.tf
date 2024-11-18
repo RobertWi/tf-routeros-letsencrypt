@@ -2,7 +2,7 @@ terraform {
   required_providers {
     acme = {
       source = "vancluever/acme"
-      version = "2.8.0"
+      version = "2.28.0"
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
